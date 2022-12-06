@@ -73,23 +73,15 @@ CMakeFiles/TyleMapCreator.dir/Map.cpp.obj: ../Map.cpp \
   C:/MinGW/include/c++/11.2.0/ext/atomicity.h \
   C:/MinGW/include/c++/11.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/MinGW/include/c++/11.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
-  C:/MinGW/x86_64-w64-mingw32/include/pthread.h \
+  C:/dev/vcpkg/installed/x64-windows/include/pthread.h \
+  C:/dev/vcpkg/installed/x64-windows/include/_ptw32.h \
   C:/MinGW/x86_64-w64-mingw32/include/errno.h \
-  C:/MinGW/x86_64-w64-mingw32/include/sys/types.h \
-  C:/MinGW/x86_64-w64-mingw32/include/process.h \
-  C:/MinGW/x86_64-w64-mingw32/include/corecrt_startup.h \
-  C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
-  C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
-  C:/MinGW/x86_64-w64-mingw32/include/limits.h \
-  C:/MinGW/x86_64-w64-mingw32/include/signal.h \
-  C:/MinGW/x86_64-w64-mingw32/include/pthread_signal.h \
   C:/MinGW/x86_64-w64-mingw32/include/time.h \
   C:/MinGW/x86_64-w64-mingw32/include/_timeval.h \
   C:/MinGW/x86_64-w64-mingw32/include/sys/timeb.h \
   C:/MinGW/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/MinGW/x86_64-w64-mingw32/include/pthread_time.h \
-  C:/MinGW/x86_64-w64-mingw32/include/pthread_compat.h \
-  C:/MinGW/x86_64-w64-mingw32/include/pthread_unistd.h \
+  C:/dev/vcpkg/installed/x64-windows/include/sched.h \
   C:/MinGW/include/c++/11.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
   C:/MinGW/include/c++/11.2.0/bits/locale_classes.h \
   C:/MinGW/include/c++/11.2.0/string \
@@ -112,6 +104,9 @@ CMakeFiles/TyleMapCreator.dir/Map.cpp.obj: ../Map.cpp \
   C:/MinGW/include/c++/11.2.0/ext/string_conversions.h \
   C:/MinGW/include/c++/11.2.0/cstdlib \
   C:/MinGW/x86_64-w64-mingw32/include/stdlib.h \
+  C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
+  C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
+  C:/MinGW/x86_64-w64-mingw32/include/limits.h \
   C:/MinGW/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
   C:/MinGW/include/c++/11.2.0/stdlib.h \
   C:/MinGW/x86_64-w64-mingw32/include/malloc.h \
@@ -143,8 +138,12 @@ CMakeFiles/TyleMapCreator.dir/Map.cpp.obj: ../Map.cpp \
   C:/MinGW/x86_64-w64-mingw32/include/io.h \
   C:/MinGW/x86_64-w64-mingw32/include/string.h \
   C:/MinGW/x86_64-w64-mingw32/include/sec_api/string_s.h \
+  C:/MinGW/x86_64-w64-mingw32/include/sys/types.h \
   C:/MinGW/x86_64-w64-mingw32/include/unistd.h \
+  C:/MinGW/x86_64-w64-mingw32/include/process.h \
+  C:/MinGW/x86_64-w64-mingw32/include/corecrt_startup.h \
   C:/MinGW/x86_64-w64-mingw32/include/getopt.h \
+  C:/MinGW/x86_64-w64-mingw32/include/pthread_unistd.h \
   C:/MinGW/include/c++/11.2.0/fstream \
   C:/MinGW/include/c++/11.2.0/bits/codecvt.h \
   C:/MinGW/include/c++/11.2.0/x86_64-w64-mingw32/bits/basic_file.h \
@@ -204,7 +203,11 @@ CMakeFiles/TyleMapCreator.dir/Map.cpp.obj: ../Map.cpp \
   C:/MinGW/include/c++/11.2.0/bits/vector.tcc \
   C:/MinGW/include/c++/11.2.0/pstl/execution_defs.h \
   C:/MinGW/include/c++/11.2.0/bits/fs_dir.h \
-  C:/MinGW/include/c++/11.2.0/bits/fs_ops.h
+  C:/MinGW/include/c++/11.2.0/bits/fs_ops.h \
+  C:/dev/vcpkg/installed/x64-windows/include/raylib.h \
+  C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdarg.h \
+  C:/MinGW/x86_64-w64-mingw32/include/stdarg.h \
+  C:/MinGW/x86_64-w64-mingw32/include/_mingw_stdarg.h
 
 CMakeFiles/TyleMapCreator.dir/main.cpp.obj: ../main.cpp \
   ../Map.h \
@@ -278,23 +281,15 @@ CMakeFiles/TyleMapCreator.dir/main.cpp.obj: ../main.cpp \
   C:/MinGW/include/c++/11.2.0/ext/atomicity.h \
   C:/MinGW/include/c++/11.2.0/x86_64-w64-mingw32/bits/gthr.h \
   C:/MinGW/include/c++/11.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
-  C:/MinGW/x86_64-w64-mingw32/include/pthread.h \
+  C:/dev/vcpkg/installed/x64-windows/include/pthread.h \
+  C:/dev/vcpkg/installed/x64-windows/include/_ptw32.h \
   C:/MinGW/x86_64-w64-mingw32/include/errno.h \
-  C:/MinGW/x86_64-w64-mingw32/include/sys/types.h \
-  C:/MinGW/x86_64-w64-mingw32/include/process.h \
-  C:/MinGW/x86_64-w64-mingw32/include/corecrt_startup.h \
-  C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
-  C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
-  C:/MinGW/x86_64-w64-mingw32/include/limits.h \
-  C:/MinGW/x86_64-w64-mingw32/include/signal.h \
-  C:/MinGW/x86_64-w64-mingw32/include/pthread_signal.h \
   C:/MinGW/x86_64-w64-mingw32/include/time.h \
   C:/MinGW/x86_64-w64-mingw32/include/_timeval.h \
   C:/MinGW/x86_64-w64-mingw32/include/sys/timeb.h \
   C:/MinGW/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
   C:/MinGW/x86_64-w64-mingw32/include/pthread_time.h \
-  C:/MinGW/x86_64-w64-mingw32/include/pthread_compat.h \
-  C:/MinGW/x86_64-w64-mingw32/include/pthread_unistd.h \
+  C:/dev/vcpkg/installed/x64-windows/include/sched.h \
   C:/MinGW/include/c++/11.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
   C:/MinGW/include/c++/11.2.0/bits/locale_classes.h \
   C:/MinGW/include/c++/11.2.0/string \
@@ -317,6 +312,9 @@ CMakeFiles/TyleMapCreator.dir/main.cpp.obj: ../main.cpp \
   C:/MinGW/include/c++/11.2.0/ext/string_conversions.h \
   C:/MinGW/include/c++/11.2.0/cstdlib \
   C:/MinGW/x86_64-w64-mingw32/include/stdlib.h \
+  C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h \
+  C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h \
+  C:/MinGW/x86_64-w64-mingw32/include/limits.h \
   C:/MinGW/x86_64-w64-mingw32/include/sec_api/stdlib_s.h \
   C:/MinGW/include/c++/11.2.0/stdlib.h \
   C:/MinGW/x86_64-w64-mingw32/include/malloc.h \
@@ -348,8 +346,12 @@ CMakeFiles/TyleMapCreator.dir/main.cpp.obj: ../main.cpp \
   C:/MinGW/x86_64-w64-mingw32/include/io.h \
   C:/MinGW/x86_64-w64-mingw32/include/string.h \
   C:/MinGW/x86_64-w64-mingw32/include/sec_api/string_s.h \
+  C:/MinGW/x86_64-w64-mingw32/include/sys/types.h \
   C:/MinGW/x86_64-w64-mingw32/include/unistd.h \
+  C:/MinGW/x86_64-w64-mingw32/include/process.h \
+  C:/MinGW/x86_64-w64-mingw32/include/corecrt_startup.h \
   C:/MinGW/x86_64-w64-mingw32/include/getopt.h \
+  C:/MinGW/x86_64-w64-mingw32/include/pthread_unistd.h \
   C:/MinGW/include/c++/11.2.0/fstream \
   C:/MinGW/include/c++/11.2.0/bits/codecvt.h \
   C:/MinGW/include/c++/11.2.0/x86_64-w64-mingw32/bits/basic_file.h \
@@ -409,7 +411,11 @@ CMakeFiles/TyleMapCreator.dir/main.cpp.obj: ../main.cpp \
   C:/MinGW/include/c++/11.2.0/bits/vector.tcc \
   C:/MinGW/include/c++/11.2.0/pstl/execution_defs.h \
   C:/MinGW/include/c++/11.2.0/bits/fs_dir.h \
-  C:/MinGW/include/c++/11.2.0/bits/fs_ops.h
+  C:/MinGW/include/c++/11.2.0/bits/fs_ops.h \
+  C:/dev/vcpkg/installed/x64-windows/include/raylib.h \
+  C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdarg.h \
+  C:/MinGW/x86_64-w64-mingw32/include/stdarg.h \
+  C:/MinGW/x86_64-w64-mingw32/include/_mingw_stdarg.h
 
 
 C:/MinGW/include/c++/11.2.0/ratio:
@@ -473,6 +479,8 @@ C:/MinGW/include/c++/11.2.0/bits/stringfwd.h:
 C:/MinGW/include/c++/11.2.0/bits/memoryfwd.h:
 
 C:/MinGW/include/c++/11.2.0/bits/postypes.h:
+
+C:/dev/vcpkg/installed/x64-windows/include/pthread.h:
 
 C:/MinGW/include/c++/11.2.0/bits/localefwd.h:
 
@@ -556,6 +564,8 @@ C:/MinGW/x86_64-w64-mingw32/include/crtdefs.h:
 
 C:/MinGW/include/c++/11.2.0/bits/hash_bytes.h:
 
+C:/dev/vcpkg/installed/x64-windows/include/sched.h:
+
 C:/MinGW/include/c++/11.2.0/ext/atomicity.h:
 
 C:/MinGW/include/c++/11.2.0/bits/char_traits.h:
@@ -596,27 +606,9 @@ C:/MinGW/include/c++/11.2.0/x86_64-w64-mingw32/bits/gthr.h:
 
 C:/MinGW/include/c++/11.2.0/x86_64-w64-mingw32/bits/gthr-default.h:
 
-C:/MinGW/x86_64-w64-mingw32/include/pthread.h:
+C:/dev/vcpkg/installed/x64-windows/include/_ptw32.h:
 
 C:/MinGW/x86_64-w64-mingw32/include/errno.h:
-
-C:/MinGW/x86_64-w64-mingw32/include/sys/types.h:
-
-C:/MinGW/x86_64-w64-mingw32/include/corecrt_startup.h:
-
-C:/MinGW/include/c++/11.2.0/filesystem:
-
-C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h:
-
-C:/MinGW/include/c++/11.2.0/utility:
-
-C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h:
-
-C:/MinGW/x86_64-w64-mingw32/include/limits.h:
-
-C:/MinGW/x86_64-w64-mingw32/include/signal.h:
-
-C:/MinGW/x86_64-w64-mingw32/include/pthread_signal.h:
 
 C:/MinGW/x86_64-w64-mingw32/include/time.h:
 
@@ -629,10 +621,6 @@ C:/MinGW/x86_64-w64-mingw32/include/wctype.h:
 C:/MinGW/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h:
 
 C:/MinGW/x86_64-w64-mingw32/include/pthread_time.h:
-
-C:/MinGW/x86_64-w64-mingw32/include/pthread_compat.h:
-
-C:/MinGW/x86_64-w64-mingw32/include/pthread_unistd.h:
 
 C:/MinGW/include/c++/11.2.0/x86_64-w64-mingw32/bits/atomic_word.h:
 
@@ -681,6 +669,16 @@ C:/MinGW/include/c++/11.2.0/cstdlib:
 C:/MinGW/include/c++/11.2.0/bits/basic_ios.tcc:
 
 C:/MinGW/x86_64-w64-mingw32/include/stdlib.h:
+
+C:/MinGW/include/c++/11.2.0/filesystem:
+
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/limits.h:
+
+C:/MinGW/include/c++/11.2.0/utility:
+
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed/syslimits.h:
+
+C:/MinGW/x86_64-w64-mingw32/include/limits.h:
 
 C:/MinGW/x86_64-w64-mingw32/include/sec_api/stdlib_s.h:
 
@@ -734,9 +732,15 @@ C:/MinGW/include/c++/11.2.0/bits/fs_ops.h:
 
 C:/MinGW/x86_64-w64-mingw32/include/sec_api/string_s.h:
 
+C:/MinGW/x86_64-w64-mingw32/include/sys/types.h:
+
+C:/MinGW/x86_64-w64-mingw32/include/corecrt_startup.h:
+
 C:/MinGW/include/c++/11.2.0/bits/sstream.tcc:
 
 C:/MinGW/x86_64-w64-mingw32/include/getopt.h:
+
+C:/MinGW/x86_64-w64-mingw32/include/pthread_unistd.h:
 
 C:/MinGW/include/c++/11.2.0/bits/codecvt.h:
 
@@ -819,5 +823,13 @@ C:/MinGW/include/c++/11.2.0/bits/vector.tcc:
 C:/MinGW/include/c++/11.2.0/pstl/execution_defs.h:
 
 C:/MinGW/include/c++/11.2.0/bits/fs_dir.h:
+
+C:/dev/vcpkg/installed/x64-windows/include/raylib.h:
+
+C:/MinGW/lib/gcc/x86_64-w64-mingw32/11.2.0/include/stdarg.h:
+
+C:/MinGW/x86_64-w64-mingw32/include/stdarg.h:
+
+C:/MinGW/x86_64-w64-mingw32/include/_mingw_stdarg.h:
 
 ../main.cpp:

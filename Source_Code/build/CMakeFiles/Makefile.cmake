@@ -27,6 +27,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/Compiler/GNU-CXX.cmake"
   "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/Compiler/GNU.cmake"
   "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/DartConfiguration.tcl.in"
+  "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/FindPackageHandleStandardArgs.cmake"
+  "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/FindPackageMessage.cmake"
+  "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/FindPkgConfig.cmake"
   "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/Platform/Windows-GNU-C-ABI.cmake"
   "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/Platform/Windows-GNU-C.cmake"
   "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.20/Modules/Platform/Windows-GNU-CXX-ABI.cmake"
@@ -41,6 +44,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.20.21032501-MSVC_2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.20.21032501-MSVC_2/CMakeRCCompiler.cmake"
   "CMakeFiles/3.20.21032501-MSVC_2/CMakeSystem.cmake"
+  "C:/dev/vcpkg/installed/x64-windows/share/raylib/raylib-config-version.cmake"
+  "C:/dev/vcpkg/installed/x64-windows/share/raylib/raylib-config.cmake"
   "C:/dev/vcpkg/scripts/buildsystems/vcpkg.cmake"
   )
 

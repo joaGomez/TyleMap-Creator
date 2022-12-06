@@ -1,12 +1,12 @@
 [
 {
   "directory": "C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/build",
-  "command": "C:/MinGW/bin/g++.exe   -g -o CMakeFiles/TyleMapCreator.dir/main.cpp.obj -c C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/main.cpp",
+  "command": "C:/MinGW/bin/g++.exe  @CMakeFiles/TyleMapCreator.dir/includes_CXX.rsp -g -o CMakeFiles/TyleMapCreator.dir/main.cpp.obj -c C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/main.cpp",
   "file": "C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/main.cpp"
 },
 {
   "directory": "C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/build",
-  "command": "C:/MinGW/bin/g++.exe   -g -o CMakeFiles/TyleMapCreator.dir/Map.cpp.obj -c C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/Map.cpp",
+  "command": "C:/MinGW/bin/g++.exe  @CMakeFiles/TyleMapCreator.dir/includes_CXX.rsp -g -o CMakeFiles/TyleMapCreator.dir/Map.cpp.obj -c C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/Map.cpp",
   "file": "C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/Map.cpp"
 }
 ]

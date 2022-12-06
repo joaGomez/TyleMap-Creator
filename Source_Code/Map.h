@@ -5,15 +5,18 @@
 
 class Map {
     public:
+        // Constructor and destructor
         Map(std::string index);
         ~Map();
 
         // Public variables
-        std::vector<char> map_distribution;
+        std::vector<int> map_distribution;
+        dimensions_t map_dimensions;
 
         // Public functions
         bool init();
         void draw();
+        void writeFile();
 
         // Getters
         std::string getName();
@@ -25,7 +28,6 @@ class Map {
         std::string file_name;
         std::filesystem::path path;
         
-        dimensions_t map_dimensions;
 
 
 

@@ -5,7 +5,7 @@ Map::Map(std::string index)
     this->file_name = "Map_" + index + ".txt";
     this->path = std::filesystem::current_path().parent_path();
 
-    this->map_dimensions = { HEIGHT, WIDTH };
+    this->map_dimensions = { .height = HEIGHT, .width = WIDTH };
 
 }
 
@@ -26,27 +26,50 @@ bool Map::init()
 {
     std::filesystem::current_path(getPath());       // Updates file path (exits build folder)
     if(std::filesystem::exists(getName())) {        // Verifies file in current folder
-        // ---------------------------------------------------
-        std::cout << "This file already exists." << std::endl;
-        // ---------------------------------------------------
+        // ---------------------------------------------------------
+        std::cout << "ERROR: This file already exists." << std::endl;
+        // ---------------------------------------------------------
 
         return false;       // If the file exists, then it has to change the map's name
     }
     else {
-        // -------------------------------------------------
-        std::cout << "This file doesn't exist" << std::endl;
-        // -------------------------------------------------
 
-        for(int i = 1 ; i < this->map_dimensions.height ; i++ ) {
-            for(int j = 1 ; j < this->map_dimensions.width ; j++ ) {        // Inits map distribution empty
-                this->map_distribution.push_back('0');
+        for(int i = 0 ; i < this->map_dimensions.height ; i++ ) {
+            for(int j = 0 ; j < this->map_dimensions.width ; j++ ) {        // Inits map distribution empty
+                this->map_distribution.push_back(0);
             }
         }
 
         std::ofstream file(getName());
-        if(std::filesystem::exists(getName()))
-        { std::cout << "File created succesfully." << std::endl; }
+        if(std::filesystem::exists(getName())) {
+            // ------------------------------------------------------------
+            std::cout << "The file was created successfully." << std::endl;
+            // ------------------------------------------------------------
+        }
 
         return true;        // The file doesn't exist in the current folder so now it created a file with that name
     }
+}
+
+
+void Map::writeFile()
+{
+    std::ofstream file;
+    file.open(getName());
+    if( !file ) { // file couldn't be opened
+      std::cout << "Error: file could not be opened" << std::endl;
+      return;
+    }
+
+    for( int i = 0 ; i < this->map_distribution.size() ; i++ ) {
+        if( i % this->map_dimensions.height == 0 ) {
+            if(i != 0)
+                file << std::endl;
+            file << this->map_distribution[i];      // Writes in a file the map distribution in a readable way
+        }
+        else {
+            file << " " << this->map_distribution[i];
+        }
+    }
+    file.close();
 }

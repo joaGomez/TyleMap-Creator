@@ -70,23 +70,15 @@ CMakeFiles/TyleMapCreator.dir/main.cpp.obj: \
  c:\mingw\include\c++\11.2.0\ext\atomicity.h \
  c:\mingw\include\c++\11.2.0\x86_64-w64-mingw32\bits\gthr.h \
  c:\mingw\include\c++\11.2.0\x86_64-w64-mingw32\bits\gthr-default.h \
- c:\mingw\x86_64-w64-mingw32\include\pthread.h \
+ C:/dev/vcpkg/installed/x64-windows/include/pthread.h \
+ C:/dev/vcpkg/installed/x64-windows/include/_ptw32.h \
  c:\mingw\x86_64-w64-mingw32\include\errno.h \
- c:\mingw\x86_64-w64-mingw32\include\sys\types.h \
- c:\mingw\x86_64-w64-mingw32\include\process.h \
- c:\mingw\x86_64-w64-mingw32\include\corecrt_startup.h \
- c:\mingw\lib\gcc\x86_64-w64-mingw32\11.2.0\include-fixed\limits.h \
- c:\mingw\lib\gcc\x86_64-w64-mingw32\11.2.0\include-fixed\syslimits.h \
- c:\mingw\x86_64-w64-mingw32\include\limits.h \
- c:\mingw\x86_64-w64-mingw32\include\signal.h \
- c:\mingw\x86_64-w64-mingw32\include\pthread_signal.h \
  c:\mingw\x86_64-w64-mingw32\include\time.h \
  c:\mingw\x86_64-w64-mingw32\include\_timeval.h \
  c:\mingw\x86_64-w64-mingw32\include\sys\timeb.h \
  c:\mingw\x86_64-w64-mingw32\include\sec_api\sys\timeb_s.h \
  c:\mingw\x86_64-w64-mingw32\include\pthread_time.h \
- c:\mingw\x86_64-w64-mingw32\include\pthread_compat.h \
- c:\mingw\x86_64-w64-mingw32\include\pthread_unistd.h \
+ C:/dev/vcpkg/installed/x64-windows/include/sched.h \
  c:\mingw\include\c++\11.2.0\x86_64-w64-mingw32\bits\atomic_word.h \
  c:\mingw\include\c++\11.2.0\bits\locale_classes.h \
  c:\mingw\include\c++\11.2.0\string \
@@ -109,6 +101,9 @@ CMakeFiles/TyleMapCreator.dir/main.cpp.obj: \
  c:\mingw\include\c++\11.2.0\ext\string_conversions.h \
  c:\mingw\include\c++\11.2.0\cstdlib \
  c:\mingw\x86_64-w64-mingw32\include\stdlib.h \
+ c:\mingw\lib\gcc\x86_64-w64-mingw32\11.2.0\include-fixed\limits.h \
+ c:\mingw\lib\gcc\x86_64-w64-mingw32\11.2.0\include-fixed\syslimits.h \
+ c:\mingw\x86_64-w64-mingw32\include\limits.h \
  c:\mingw\x86_64-w64-mingw32\include\sec_api\stdlib_s.h \
  c:\mingw\include\c++\11.2.0\stdlib.h \
  c:\mingw\x86_64-w64-mingw32\include\malloc.h \
@@ -139,8 +134,12 @@ CMakeFiles/TyleMapCreator.dir/main.cpp.obj: \
  c:\mingw\x86_64-w64-mingw32\include\io.h \
  c:\mingw\x86_64-w64-mingw32\include\string.h \
  c:\mingw\x86_64-w64-mingw32\include\sec_api\string_s.h \
+ c:\mingw\x86_64-w64-mingw32\include\sys\types.h \
  c:\mingw\x86_64-w64-mingw32\include\unistd.h \
+ c:\mingw\x86_64-w64-mingw32\include\process.h \
+ c:\mingw\x86_64-w64-mingw32\include\corecrt_startup.h \
  c:\mingw\x86_64-w64-mingw32\include\getopt.h \
+ c:\mingw\x86_64-w64-mingw32\include\pthread_unistd.h \
  c:\mingw\include\c++\11.2.0\fstream \
  c:\mingw\include\c++\11.2.0\bits\codecvt.h \
  c:\mingw\include\c++\11.2.0\x86_64-w64-mingw32\bits\basic_file.h \
@@ -197,4 +196,8 @@ CMakeFiles/TyleMapCreator.dir/main.cpp.obj: \
  c:\mingw\include\c++\11.2.0\bits\vector.tcc \
  c:\mingw\include\c++\11.2.0\pstl\execution_defs.h \
  c:\mingw\include\c++\11.2.0\bits\fs_dir.h \
- c:\mingw\include\c++\11.2.0\bits\fs_ops.h
+ c:\mingw\include\c++\11.2.0\bits\fs_ops.h \
+ C:/dev/vcpkg/installed/x64-windows/include/raylib.h \
+ c:\mingw\lib\gcc\x86_64-w64-mingw32\11.2.0\include\stdarg.h \
+ c:\mingw\x86_64-w64-mingw32\include\stdarg.h \
+ c:\mingw\x86_64-w64-mingw32\include\_mingw_stdarg.h
