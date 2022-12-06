@@ -629,12 +629,12 @@ CMakeFiles/ExperimentalMemCheck.dir/clean:
 CMakeFiles/TyleMapCreator.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TyleMapCreator.dir/build.make CMakeFiles/TyleMapCreator.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TyleMapCreator.dir/build.make CMakeFiles/TyleMapCreator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/build/CMakeFiles --progress-num=1,2,3 "Built target TyleMapCreator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/build/CMakeFiles --progress-num=1,2,3,4 "Built target TyleMapCreator"
 .PHONY : CMakeFiles/TyleMapCreator.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TyleMapCreator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/build/CMakeFiles 4
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/TyleMapCreator.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/build/CMakeFiles 0
 .PHONY : CMakeFiles/TyleMapCreator.dir/rule

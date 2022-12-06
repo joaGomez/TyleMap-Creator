@@ -3,20 +3,23 @@
 
 #include "globals.h"
 
+
+
 class Map {
     public:
         // Constructor and destructor
-        Map(std::string index);
+        Map(std::string name);
         ~Map();
 
-        // Public variables
+        // Variables
         std::vector<int> map_distribution;
         dimensions_t map_dimensions;
 
-        // Public functions
+        // Functions
         bool init();
         void draw();
         void writeFile();
+        Color distributionValue(int value);
 
         // Getters
         std::string getName();
@@ -24,12 +27,9 @@ class Map {
         dimensions_t getDimensions();
 
     private:
-        // Private variables
+        // Variables
         std::string file_name;
         std::filesystem::path path;
-        
-
-
 
 
 };

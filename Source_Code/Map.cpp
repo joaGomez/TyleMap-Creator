@@ -1,8 +1,8 @@
 #include "Map.h"
 
-Map::Map(std::string index)
+Map::Map(std::string name)
 {
-    this->file_name = "Map_" + index + ".txt";
+    this->file_name = "Map_" + name + ".txt";
     this->path = std::filesystem::current_path().parent_path();
 
     this->map_dimensions = { .height = HEIGHT, .width = WIDTH };
@@ -56,9 +56,11 @@ void Map::writeFile()
 {
     std::ofstream file;
     file.open(getName());
-    if( !file ) {       // file couldn't be opened
-      std::cout << "Error: file could not be opened" << std::endl;
-      return;
+    if( !file ) {                   // file couldn't be opened
+        // ----------------------------------------------------------
+        std::cout << "Error: file could not be opened." << std::endl;
+        // ----------------------------------------------------------
+        return;
     }
 
     for( int i = 0 ; i < this->map_distribution.size() ; i++ ) {
@@ -72,4 +74,21 @@ void Map::writeFile()
         }
     }
     file.close();
+}
+
+Color Map::distributionValue(int value)
+{
+    switch (value)
+    {
+        case 0:             // Empty space
+            return BLACK;
+        case 1:             // Wall
+            return WHITE;
+        case 2:             // Door
+            return RED;
+
+        default:
+            break;
+    }
+    return BLACK;           // Possible misvalue
 }

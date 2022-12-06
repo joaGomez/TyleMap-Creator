@@ -1,5 +1,5 @@
-CMakeFiles/TyleMapCreator.dir/main.cpp.obj: \
- C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/main.cpp \
+CMakeFiles/TyleMapCreator.dir/Menu.cpp.obj: \
+ C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/Menu.cpp \
  C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/Menu.h \
  C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/Map.h \
  C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/globals.h \

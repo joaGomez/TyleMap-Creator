@@ -20,7 +20,7 @@ endif()
 # Packages
 find_package(raylib CONFIG REQUIRED)
 
-add_executable(TyleMapCreator main.cpp Map.cpp)
+add_executable(TyleMapCreator main.cpp Map.cpp Menu.cpp)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})

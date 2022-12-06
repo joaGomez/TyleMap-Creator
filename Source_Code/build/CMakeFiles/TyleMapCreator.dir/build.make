@@ -99,21 +99,38 @@ CMakeFiles/TyleMapCreator.dir/Map.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TyleMapCreator.dir/Map.cpp.s"
 	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/Map.cpp -o CMakeFiles/TyleMapCreator.dir/Map.cpp.s
 
+CMakeFiles/TyleMapCreator.dir/Menu.cpp.obj: CMakeFiles/TyleMapCreator.dir/flags.make
+CMakeFiles/TyleMapCreator.dir/Menu.cpp.obj: CMakeFiles/TyleMapCreator.dir/includes_CXX.rsp
+CMakeFiles/TyleMapCreator.dir/Menu.cpp.obj: ../Menu.cpp
+CMakeFiles/TyleMapCreator.dir/Menu.cpp.obj: CMakeFiles/TyleMapCreator.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/TyleMapCreator.dir/Menu.cpp.obj"
+	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/TyleMapCreator.dir/Menu.cpp.obj -MF CMakeFiles/TyleMapCreator.dir/Menu.cpp.obj.d -o CMakeFiles/TyleMapCreator.dir/Menu.cpp.obj -c C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/Menu.cpp
+
+CMakeFiles/TyleMapCreator.dir/Menu.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/TyleMapCreator.dir/Menu.cpp.i"
+	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/Menu.cpp > CMakeFiles/TyleMapCreator.dir/Menu.cpp.i
+
+CMakeFiles/TyleMapCreator.dir/Menu.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/TyleMapCreator.dir/Menu.cpp.s"
+	C:/MinGW/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/Menu.cpp -o CMakeFiles/TyleMapCreator.dir/Menu.cpp.s
+
 # Object files for target TyleMapCreator
 TyleMapCreator_OBJECTS = \
 "CMakeFiles/TyleMapCreator.dir/main.cpp.obj" \
-"CMakeFiles/TyleMapCreator.dir/Map.cpp.obj"
+"CMakeFiles/TyleMapCreator.dir/Map.cpp.obj" \
+"CMakeFiles/TyleMapCreator.dir/Menu.cpp.obj"
 
 # External object files for target TyleMapCreator
 TyleMapCreator_EXTERNAL_OBJECTS =
 
 TyleMapCreator.exe: CMakeFiles/TyleMapCreator.dir/main.cpp.obj
 TyleMapCreator.exe: CMakeFiles/TyleMapCreator.dir/Map.cpp.obj
+TyleMapCreator.exe: CMakeFiles/TyleMapCreator.dir/Menu.cpp.obj
 TyleMapCreator.exe: CMakeFiles/TyleMapCreator.dir/build.make
 TyleMapCreator.exe: C:/dev/vcpkg/installed/x64-windows/debug/lib/raylib.lib
 TyleMapCreator.exe: CMakeFiles/TyleMapCreator.dir/linklibs.rsp
 TyleMapCreator.exe: CMakeFiles/TyleMapCreator.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable TyleMapCreator.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:/Users/joako/OneDrive/Escritorio/Storage/TyleMap-Creator/Source_Code/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable TyleMapCreator.exe"
 	"C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe" -E rm -f CMakeFiles/TyleMapCreator.dir/objects.a
 	C:/MinGW/bin/ar.exe cr CMakeFiles/TyleMapCreator.dir/objects.a @CMakeFiles/TyleMapCreator.dir/objects1.rsp
 	C:/MinGW/bin/g++.exe -g -Wl,--whole-archive CMakeFiles/TyleMapCreator.dir/objects.a -Wl,--no-whole-archive -o TyleMapCreator.exe -Wl,--out-implib,libTyleMapCreator.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/TyleMapCreator.dir/linklibs.rsp
