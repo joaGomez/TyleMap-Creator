@@ -36,14 +36,14 @@ int Menu::mousePosInMap(Vector2 mouse_pos)
 {
     int index = -1;
     for(int i = 0 ; i < map->map_dimensions.height ; i++ ) {
-        for(int j = 0 ; j < map->map_dimensions.width ; j++ ) {        // Inits map distribution empty
+        for(int j = 0 ; j < map->map_dimensions.width ; j++ ) {
             if( mouse_pos.x >= j * PIXELS_BY_CELL + 2 && mouse_pos.x <= j * PIXELS_BY_CELL + PIXELS_BY_CELL + 2
             && mouse_pos.y >= i * PIXELS_BY_CELL + 2 && mouse_pos.y <= i * PIXELS_BY_CELL + PIXELS_BY_CELL + 2) {
                 index = i * map->map_dimensions.height + j;
             }
         }
     }
-    return index;
+    return index;   // Returns matrix' index where it is the mouse position
 }
 
 void Menu::update()
