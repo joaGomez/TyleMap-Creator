@@ -56,7 +56,7 @@ void Map::writeFile()
 {
     std::ofstream file;
     file.open(getName());
-    if( !file ) { // file couldn't be opened
+    if( !file ) {       // file couldn't be opened
       std::cout << "Error: file could not be opened" << std::endl;
       return;
     }
