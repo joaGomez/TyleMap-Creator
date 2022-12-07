@@ -23,6 +23,7 @@ class Menu {
 
         // Variables
         Map* map;
+        bool map_flag;
 
         // Functions
         bool initMap(std::string map_name);

@@ -5,6 +5,7 @@ Menu::Menu()
     this->window_dimensions = { .height = HEIGHT * PIXELS_BY_CELL, .width = WIDTH * PIXELS_BY_CELL};
     InitWindow(this->window_dimensions.width, this->window_dimensions.height, "TyleMap Creator");
     setState(init);
+    map_flag = false;
 }
 
 Menu::~Menu()
@@ -21,6 +22,17 @@ bool Menu::initMap(std::string map_name)
 void Menu::deleteMap()
 {
     delete this->map;
+}
+
+void Menu::drawStarterMenu()
+{
+    BeginDrawing();
+    ClearBackground(BLACK);
+
+    DrawText("New Map", 325, 290, 40, WHITE);
+    DrawText("Exit", 380, 450, 40, WHITE);
+
+    EndDrawing();
 }
 
 void Menu::drawMap()
@@ -62,7 +74,7 @@ void Menu::update()
     Vector2 mouse_pos = GetMousePosition();
     int index = mousePosInMap(mouse_pos);
     if(index != -1) {
-        if(IsMouseButtonPressed(0)) {
+        if(IsMouseButtonPressed(0) || IsMouseButtonDown(0)) {
             std::cout << "Mouse left button pressed." << std::endl;
             if(map->map_distribution[index] != 1) {
                 map->map_distribution[index] = 1;   // Place a wall
@@ -71,7 +83,7 @@ void Menu::update()
                 map->map_distribution[index] = 0;   // Leaves empty space
             }
         }
-        else if(IsMouseButtonPressed(1)) {
+        else if(IsMouseButtonPressed(1) || IsMouseButtonDown(1)) {
             std::cout << "Mouse right button pressed." << std::endl;
             if(map->map_distribution[index] != 2) {
                 map->map_distribution[index] = 2;   // Place a door
@@ -80,6 +92,9 @@ void Menu::update()
                 map->map_distribution[index] = 0;   // Leaves empty space
             }
         }
+    }
+    if(IsKeyDown(KEY_ESCAPE) || IsKeyPressed(KEY_ESCAPE)) {
+        setState(finish);
     }
 }
 

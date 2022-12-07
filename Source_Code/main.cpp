@@ -12,7 +12,7 @@ int main(int, char**) {
     {
         state = menu->getState();
         if(state == init) {
-            menu->setState(start);
+            menu->drawStarterMenu();
         }
         
         else if(state == start) {
@@ -35,6 +35,8 @@ int main(int, char**) {
         else if(state == finish) {
             menu->map->writeFile();
             menu->deleteMap();
+            menu->setState(init);
+            file_name = "";
         }
     }
     CloseWindow();
