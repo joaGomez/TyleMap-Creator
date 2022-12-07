@@ -36,7 +36,12 @@ bool Map::init()
 
         for(int i = 0 ; i < this->map_dimensions.height ; i++ ) {
             for(int j = 0 ; j < this->map_dimensions.width ; j++ ) {        // Inits map distribution empty
-                this->map_distribution.push_back(0);
+                if(i == 0 || i == this->map_dimensions.height - 1 || j == 0 || j == this->map_dimensions.width - 1) {
+                    this->map_distribution.push_back(1);
+                }
+                else {
+                    this->map_distribution.push_back(0);
+                }
             }
         }
 
@@ -57,9 +62,9 @@ void Map::writeFile()
     std::ofstream file;
     file.open(getName());
     if( !file ) {                   // file couldn't be opened
-        // ----------------------------------------------------------
-        std::cout << "Error: file could not be opened." << std::endl;
-        // ----------------------------------------------------------
+        // -----------------------------------------------------------
+        std::cout << "Error: file could not be written." << std::endl;
+        // -----------------------------------------------------------
         return;
     }
 

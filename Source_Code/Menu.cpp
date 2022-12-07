@@ -4,6 +4,7 @@ Menu::Menu()
 {
     this->window_dimensions = { .height = HEIGHT * PIXELS_BY_CELL, .width = WIDTH * PIXELS_BY_CELL};
     InitWindow(this->window_dimensions.width, this->window_dimensions.height, "TyleMap Creator");
+    setState(init);
 }
 
 Menu::~Menu()
@@ -11,10 +12,10 @@ Menu::~Menu()
 
 }
 
-void Menu::initMap(std::string map_name)
+bool Menu::initMap(std::string map_name)
 {
     this->map = new Map(map_name);
-    this->map->init();
+    return this->map->init();
 }
 
 void Menu::deleteMap()
@@ -22,14 +23,20 @@ void Menu::deleteMap()
     delete this->map;
 }
 
-void Menu::draw()
+void Menu::drawMap()
 {
+    BeginDrawing();
+    ClearBackground(GRAY);
+
     for(int i = 0 ; i < map->map_dimensions.height ; i++ ) {
-        for(int j = 0 ; j < map->map_dimensions.width ; j++ ) {        // Inits map distribution empty
+        for(int j = 0 ; j < map->map_dimensions.width ; j++ ) {        // Draw every map cell
             DrawRectangle( j * PIXELS_BY_CELL + 2, i * PIXELS_BY_CELL + 2, 
             PIXELS_BY_CELL - 2, PIXELS_BY_CELL - 2, map->distributionValue(map->map_distribution[i * map->map_dimensions.height + j]));
         }
     }
+
+    DrawFPS(10, 10);
+    EndDrawing();
 }
 
 int Menu::mousePosInMap(Vector2 mouse_pos)
@@ -37,7 +44,11 @@ int Menu::mousePosInMap(Vector2 mouse_pos)
     int index = -1;
     for(int i = 0 ; i < map->map_dimensions.height ; i++ ) {
         for(int j = 0 ; j < map->map_dimensions.width ; j++ ) {
-            if( mouse_pos.x >= j * PIXELS_BY_CELL + 2 && mouse_pos.x <= j * PIXELS_BY_CELL + PIXELS_BY_CELL + 2
+            if(i == 0 || i == map->map_dimensions.height - 1 ||
+                j == 0 || j == map->map_dimensions.width - 1) {
+                // To avoid ifs chain: by this we avoid changing the border´s value
+            }
+            else if( mouse_pos.x >= j * PIXELS_BY_CELL + 2 && mouse_pos.x <= j * PIXELS_BY_CELL + PIXELS_BY_CELL + 2
             && mouse_pos.y >= i * PIXELS_BY_CELL + 2 && mouse_pos.y <= i * PIXELS_BY_CELL + PIXELS_BY_CELL + 2) {
                 index = i * map->map_dimensions.height + j;
             }
@@ -70,4 +81,18 @@ void Menu::update()
             }
         }
     }
+}
+
+// Getters
+
+int Menu::getState()
+{
+    return this->state;
+}
+
+// Setters
+
+void Menu::setState(int new_state)
+{
+    this->state = new_state;
 }

@@ -5,24 +5,39 @@ int main(int, char**) {
     
     Menu* menu = new Menu();
 
-    menu->initMap("1");
-    menu->map->writeFile();
+    std::string file_name = "1";
+    int state = menu->getState();
 
-    while (!WindowShouldClose())
+    while (!WindowShouldClose() && state != end)
     {
-        menu->update();
+        state = menu->getState();
+        if(state == init) {
+            menu->setState(start);
+        }
+        
+        else if(state == start) {
+            if(menu->initMap(file_name)) {   // Creates a file for the map distribution
+                menu->setState(running);    // Created file successfully and now runs drawing mode
+            }
+            else {
+                // ----------------------------------------------------
+                std::cout << "File could not be created." << std::endl;  // File already exists
+                // ----------------------------------------------------
+            }
+        }
+        else if(state == running) {
+            menu->update();
+            menu->drawMap();
+        }
+        else if(state == pause) {
 
-        // Drawing
-        BeginDrawing();
-        ClearBackground(GRAY);
-        menu->draw();
-        DrawFPS(10, 10);
-        EndDrawing();
-
-
+        }
+        else if(state == finish) {
+            menu->map->writeFile();
+            menu->deleteMap();
+        }
     }
-
-    menu->map->writeFile();
     CloseWindow();
     
+    return 0;
 }
