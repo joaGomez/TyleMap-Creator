@@ -4,7 +4,7 @@
 #include "Map.h"
 
 #define PIXELS_BY_CELL  40   // Window's pixels by every cell of the map
-
+#define MAX_CHARACTERS  8    // Max characters for map name
 
 enum states {
     init,      // Init menu variables
@@ -15,6 +15,9 @@ enum states {
     end        // End program
 };
 
+bool inside(Vector2 pos, int x1, int y1, int x2, int y2);
+bool IsAnyKeyPressed();
+
 class Menu {
     public:
         // Constructor and destructor
@@ -24,6 +27,8 @@ class Menu {
         // Variables
         Map* map;
         bool map_flag;
+        std::string map_name;
+        int frames_counter;
 
         // Functions
         bool initMap(std::string map_name);
