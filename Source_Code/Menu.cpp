@@ -22,12 +22,13 @@ bool IsAnyKeyPressed()
 
 Menu::Menu()
 {
-    this->window_dimensions = { .height = HEIGHT * PIXELS_BY_CELL, .width = WIDTH * PIXELS_BY_CELL};
+    this->window_dimensions = { .height = HEIGHT * PIXELS_BY_CELL, .width = WIDTH * PIXELS_BY_CELL + 350};
     InitWindow(this->window_dimensions.width, this->window_dimensions.height, "TyleMap Creator");
     setState(init);
     this->map_flag = false;
     this->map_name = "";
     this->frames_counter = 0;
+    this->name_error = false;
 }
 
 Menu::~Menu()
@@ -54,46 +55,55 @@ void Menu::drawStarterMenu()
     ClearBackground(BLACK);
 
     if(this->map_flag == true) {
-        if(IsMouseButtonPressed(0) && inside(mouse_pos, 255, 290, 600, 330)) {
-            DrawText("Write your map name here.", 225, 290, 30, GRAY);
-            this->map_flag = false;
+        if(IsMouseButtonPressed(0) && inside(mouse_pos, 255 + 175, 290, 600 + 175, 330)) {
+            DrawText("Write your map name here.", 225 + 175, 290, 30, GRAY);
+            // this->map_flag = false;
         }
-        else {
-            DrawText(this->map_name.c_str(), 285, 290, 35, WHITE);
-        }
-        DrawText("Exit", 380, 450, 40, WHITE);
+        DrawText("|", 285 + MeasureText(this->map_name.c_str(), 40) - 3*this->map_name.size() + 175, 290, 40, WHITE);
+        DrawText(this->map_name.c_str(), 285 + 175, 290, 35, WHITE);
+        DrawText("Exit", 380 + 175, 450, 40, WHITE);
         this->frames_counter++;
 
         // ----------------------------
         int key = GetCharPressed();
-        if ((key >= 32) && (key <= 125) && (this->map_name.size() < MAX_CHARACTERS)) {
+        if ((key >= 33) && (key <= 125) && (this->map_name.size() < MAX_CHARACTERS)) {
+            if(key != KEY_PERIOD)
             this->map_name = this->map_name + (char)key;
         }
     
         if (IsKeyPressed(KEY_BACKSPACE) && this->map_name.size() > 0) {
             this->map_name.erase(this->map_name.size() - 1, 1);
         }
+        if(IsKeyPressed(KEY_ENTER) && this->map_name.size() > 0) {
+            setState(start);
+        }
     }
     else {
-        if(IsMouseButtonPressed(0) && inside(mouse_pos, 255, 290, 600, 330)) {
-            DrawText(this->map_name.c_str(), 285, 290, 35, WHITE);
+        if(IsMouseButtonPressed(0) && inside(mouse_pos, 255 + 175, 290, 600 + 175, 330)) {
+            DrawText(this->map_name.c_str(), 285 + 175, 290, 35, WHITE);
             this->map_flag = true;
         }
-        if(inside(mouse_pos, 255, 290, 600, 330)) {
-            DrawText("Write your map name here.", 225, 290, 30, GRAY);
+        else if(map_name.size() > 0) {
+            DrawText(this->map_name.c_str(), 285 + 175, 290, 35, WHITE);
+        }
+        else if(inside(mouse_pos, 255 + 175, 290, 600 + 175, 330)) {
+            DrawText("Write your map name here.", 225 + 175, 290, 30, GRAY);
         }
         else {
-            DrawText("New Map", 325, 290, 40, WHITE);
+            DrawText("New Map", 325 + 175, 290, 40, WHITE);
         }
-        DrawText("Exit", 380, 450, 40, WHITE);
+        DrawText("Exit", 380 + 175, 450, 40, WHITE);
         this->frames_counter = 0;
     }
-    if(IsMouseButtonPressed(0) && !inside(mouse_pos, 255, 290, 600, 330) && !inside(mouse_pos, 380, 450, 500, 490)) {
+    if(IsMouseButtonPressed(0) && !inside(mouse_pos, 255 + 175, 290, 600 + 175, 330) && !inside(mouse_pos, 380 + 175, 450, 500 + 175, 490)) {
         this->map_flag = false;
     }
-    else if(IsMouseButtonPressed(0) && inside(mouse_pos, 380, 450, 500, 490)) {
+    else if(IsMouseButtonPressed(0) && inside(mouse_pos, 380 + 175, 450, 500 + 175, 490)) {
         this->setState(end);
         std::cout << this->map_name << std::endl;
+    }
+    if(this->name_error == true) {
+        DrawText("ERROR: This map name is already in use.", 115 + 175, 690, 30, RED);
     }
 
     EndDrawing();
@@ -112,6 +122,13 @@ void Menu::drawMap()
     }
 
     DrawFPS(10, 10);
+    DrawText("PRESS:", 900, 50, 30, WHITE);
+    DrawText("D -> Delete wall/door", 850, 150, 20, WHITE);
+    DrawText("LEFT CLICK -> Add wall", 850, 200, 20, WHITE);
+    DrawText("RIGHT CLICK -> Add door", 850, 250, 20, WHITE);
+    DrawText("ENTER -> Save map", 850, 700, 25, WHITE);
+    DrawText("ESC -> Exit", 850, 750, 25, WHITE);
+
     EndDrawing();
 }
 
@@ -140,25 +157,31 @@ void Menu::update()
     if(index != -1) {
         if(IsMouseButtonPressed(0) || IsMouseButtonDown(0)) {
             std::cout << "Mouse left button pressed." << std::endl;
-            if(map->map_distribution[index] != 1) {
+            map->map_distribution[index] = 1;
+            /*if(map->map_distribution[index] != 1) {
                 map->map_distribution[index] = 1;   // Place a wall
             }
             else {  // If there it was already a wall
                 map->map_distribution[index] = 0;   // Leaves empty space
-            }
+            }*/
         }
         else if(IsMouseButtonPressed(1) || IsMouseButtonDown(1)) {
             std::cout << "Mouse right button pressed." << std::endl;
-            if(map->map_distribution[index] != 2) {
+            map->map_distribution[index] = 2;
+            /*if(map->map_distribution[index] != 2) {
                 map->map_distribution[index] = 2;   // Place a door
             }
             else {  // If there it was already a door
                 map->map_distribution[index] = 0;   // Leaves empty space
-            }
+            }*/
         }
-    }
-    if(IsKeyDown(KEY_ESCAPE) || IsKeyPressed(KEY_ESCAPE)) {
-        setState(finish);
+        else if(IsKeyPressed(KEY_D)) {
+            std::cout << "Key DELETE pressed." << std::endl;
+            map->map_distribution[index] = 0;
+        }
+        else if(IsKeyPressed(KEY_ENTER)) {
+            setState(finish);
+        }
     }
 }
 

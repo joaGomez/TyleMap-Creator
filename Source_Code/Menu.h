@@ -4,7 +4,7 @@
 #include "Map.h"
 
 #define PIXELS_BY_CELL  40   // Window's pixels by every cell of the map
-#define MAX_CHARACTERS  8    // Max characters for map name
+#define MAX_CHARACTERS  12    // Max characters for map name
 
 enum states {
     init,      // Init menu variables
@@ -27,6 +27,7 @@ class Menu {
         // Variables
         Map* map;
         bool map_flag;
+        bool name_error;
         std::string map_name;
         int frames_counter;
 
@@ -50,8 +51,6 @@ class Menu {
 
         // Functions
         int mousePosInMap(Vector2 mouse_pos);
-
-
 };
 
 #endif  // MENU_H
